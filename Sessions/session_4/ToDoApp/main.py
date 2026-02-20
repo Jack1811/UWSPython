@@ -27,12 +27,12 @@ def main():
             print("5. Edit a task")
             print("6. Quit")
             
-            choice = input("Enter your choice: ")
+            choice: str = input("Enter your choice: ")
 
             if choice == "1":
-                title = input("Enter a task: ")
-                input_date = input("Enter a due date (YYYY-MM-DD): ")
-                date_object = datetime.datetime.strptime(input_date, "%Y-%m-%d")
+                title: str = input("Enter a task: ")
+                input_date: str = input("Enter a due date (YYYY-MM-DD): ")
+                date_object: datetime.datetime = datetime.datetime.strptime(input_date, "%Y-%m-%d")
                 task = Task(title, date_object)
                 task_list.add_task(task)
 
@@ -57,8 +57,6 @@ def main():
             else:
                 print("Invalid option")
                 return
-
-# propagate the task list with some sample tasks
 
             
 if __name__ == "__main__": 
